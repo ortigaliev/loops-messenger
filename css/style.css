@@ -1,6 +1,41 @@
+/* FONT FACE */
+@font-face {
+  font-family: 'Roboto';
+  src: url('Roboto-Regular.woff2') format('woff2'),
+  url('Roboto-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('Roboto-Bold.woff2') format('woff2'),
+  url('Roboto-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('Roboto-Light.woff2') format('woff2'),
+  url('Roboto-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 /* Custom Prop */
 :root{
-  
+  --user-name-bg: rgb(106, 150, 216);
+  --user-name-color: #fff;
+  --sender-bg: rgb(230, 237, 246);
+  --reciever-bg: rgb(242, 242, 242);
+  --block-messege-bg: rgb(255, 194, 193);
+  --text-color: #111;
+  --background-color: rgb(191, 208, 224);
 }
 
 /* GLOBAL STYLES */
@@ -26,8 +61,7 @@ body{
   font-size: 16px;
   line-height: 1.5;
   font-family: "Roboto", "Arial", sans-serif;
-  background-color: var();
-  color: var();
+  background-color: var(--background-color);
 }
 
 img{
@@ -49,4 +83,233 @@ img{
 /* MAIN CONTENT */
 .main-content{
   flex-grow: 1;
+}
+
+/* MESSEGE-HEADER*/
+
+.messege-wrapper {
+  flex-grow: 1;
+  margin: 100px auto;
+
+}
+.messege-card {
+  max-width: 100%;
+  width: 600px;
+  background-color: #fff;
+}
+.messege-username-wrapper{
+  background-color: var(--user-name-bg);
+  padding-left: 35px;
+  padding-right: 35px;
+
+}
+
+.messege-username {
+  display: flex;
+  align-items: center;
+
+}
+.messege-username-list {
+  padding-left: 20px;
+}
+.messege-username-item {
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
+  line-height: 1.5;
+  font-family: "Roboto", "Arial", sans-serif;
+  color: var(--user-name-color);
+}
+.messege-close-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-left: auto;
+  border: none;
+  background-color: transparent;
+  opacity: 0.6;
+}
+
+.messege-close-button:hover{
+  opacity: 1;
+  border-radius: 50%;
+  box-shadow: 0 0 0 0.4px rgba(0, 0, 0, 0.05);
+}
+.messege-close-button-icon {
+  background-color: none;
+}
+
+/* MAIN MESSENGER_SECTION */
+.main-messege-section {
+  margin: 0;
+  padding: 35px;
+
+}
+
+.devider-wrapper{
+  position: relative;
+}
+.messege-top-devider {
+  margin: 0;
+  border: none;
+  width: 100%;
+  height: 1px;
+  background-color: rgb(221, 211, 211);
+}
+
+.messege-top-devider-day{
+  position: absolute;
+  padding: 5px;
+  font-size: 20px;
+  line-height: 1.5;
+  font-family: "Roboto", "Arial", sans-serif;
+  background-color: #fff;
+  color: rgb(221, 211, 211);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.sender-wrapper {
+  padding-top: 25px;
+  margin-bottom: 20px;
+}
+.sender-messege-time {
+  display: block;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 5px;
+  font-size: 22px;
+  line-height: 1.5;
+  font-family: "Roboto", "Arial", sans-serif;
+  color: rgb(221, 211, 211);
+
+}
+.sender-messege-info {
+  margin: 0;
+  margin-left: 5px;
+  padding: 10px;
+  background-color: var(--sender-bg);
+  border-radius: 5px;
+  width: 70%;
+  font-size: 20px;
+  line-height: 1.5;
+  font-family: "Roboto", "Arial", sans-serif;
+}
+
+/* RECIEVER */
+
+.reciever-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.reciever-messege-time {
+  display: block;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 5px;
+  font-size: 22px;
+  line-height: 1.5;
+  font-family: "Roboto", "Arial", sans-serif;
+  color: rgb(221, 211, 211);
+  text-align: right;
+}
+.reciever-messege-info {
+  width: 70%;
+  text-align: right;
+  margin: 0;
+  margin-left: 160px;
+  padding: 10px;
+  background-color: var(--reciever-bg);
+  border-radius: 5px;
+  font-size: 20px;
+  line-height: 1.5;
+  font-family: "Roboto", "Arial", sans-serif;
+}
+
+.sender-messege-info-short{
+  display: inline-block;
+  width: auto;
+  max-width: 370px;
+  padding-bottom: 10px;
+}
+
+/* BLOCK MESSEGE */
+
+.block-messege-wrapper {
+  margin-top: 20px;
+}
+.block-messege-info {
+  display: inline-block;
+  width: auto;
+  max-width: 370px;
+  margin: 0;
+  margin-bottom: 20px;
+  margin-left: 243px;
+  padding: 10px;
+  text-align: right;
+  background-color: var(--block-messege-bg);
+  border-radius: 5px;
+  font-size: 20px;
+  line-height: 1.5;
+  font-family: "Roboto", "Arial", sans-serif;
+}
+
+.messege-bottom-devider{
+  margin: 0;
+  border: none;
+  width: 100%;
+  height: 1px;
+  background-color: rgb(221, 211, 211);
+}
+
+/* MESSEGE -bottom */
+
+.messege-form{
+  padding-top: 30px;
+  border: transparent;
+
+}
+
+.messege-button-label {
+  border: transparent;
+
+}
+.messege-button-input {
+  width: 80%;
+  padding: 0;
+  border: transparent;
+  font-size: 20px;
+  line-height: 1.5;
+  font-family: "Roboto", "Arial", sans-serif;
+  margin-left: auto;
+  font-weight: 500;
+
+}
+
+.messege-button-input:focus{
+  outline: none;
+}
+
+
+.messege-send-button {
+  border: none;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 1.5;
+  font-family: "Roboto", "Arial", sans-serif;
+  margin-left: auto;
+  font-weight: 700;
+  color: var(--user-name-bg);
+  cursor: pointer;
+}
+
+.messege-send-button:hover{
+  opacity: 0.6;
+}
+.messege-send-button:active{
+  top: 1px;
 }

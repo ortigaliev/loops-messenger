@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="uz">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project Name</title>
+  <title>Messenger</title>
 
   <!-- Google fonts -->
 
@@ -14,7 +14,64 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div class="messege-wrapper">
+  <div class="messege-card">
+    <div class="messege-username-wrapper">
+      <header class="messege-username">
+        <ul class="messege-username-list">
+          <li class="messege-username-item">Mark Zuckerberg</li>
+        </ul>
+        <button class="messege-close-button" type="button">
+          <img class="messege-close-button-icon" src="/img/close.svg" alt="close-icon">
+        </button>
+      </header>
+    </div>
 
+    <!-- MAIN MESSEGE SECTION -->
+
+    <section class="main-messege-section">
+      <div class="devider-wrapper">
+        <hr class="messege-top-devider">
+        <div class="messege-top-devider-day">Today</div>
+      </div>
+
+      <div class="sender-reciever-position-list">
+
+          <div class="sender-wrapper">
+            <div class="sender-messege-time">10:53</div>
+            <div class="sender-messege-info">Hi Jamoliddin! I made a new design for Messenger App.</div>
+          </div>
+
+            <div class="reciever-wrapper">
+              <div class="reciever-messege-time">10:57</div>
+              <div class="reciever-messege-info">Yo. Send it to my assistant we'll review it during the year</div>
+            </div>
+
+            <div class="sender-wrapper">
+              <div class="sender-messege-time">11:03</div>
+              <div class="sender-messege-info sender-messege-info-short">But Jamoliddin!</div>
+            </div>
+
+            <div class="block-messege-wrapper">
+              <div class="block-messege-info">You were blocked by the user.</div>
+            </div>
+      </div>
+
+      <div class="bottom-devider devider-wrapper">
+        <hr class="messege-bottom-devider">
+      </div>
+
+
+      <!-- FORM -->
+      <form class="messege-form" action="https:echo.htmlacademy.ru" GET="POST">
+        <label class="messege-button-label">
+          <input class="messege-button-input" type="text" name="messege" placeholder="Enter your messege">
+        </label>
+        <button class="messege-send-button" type="submit">send</button>
+      </form>
+    </section>
+  </div>
+</div>
 
 </body>
 </html>
